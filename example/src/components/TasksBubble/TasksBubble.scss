@@ -1,17 +1,15 @@
 .body {
-  position: fixed;
-  z-index: 110;
-  left: 30px;
-  top: 117px;
+  padding: 30px 0px 0px 30px;
+
+  @media only screen and (max-width: 767px) {
+    display: none;
+  }
 }
 
 .bubble {
-  color: #fff;
-  font-size: 40px;
-  line-height: 100px;
-  text-align: center;
-  width: 100px;
-  height: 100px;
-  background-color: rgba(221, 17, 68, .1);
-  border-radius: 100%;
+  font-family: 'Merriweather', serif;
+
+  span {
+    color: rgba(255, 0, 0, 0.5);
+  }
 }

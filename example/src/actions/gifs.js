@@ -1,13 +1,11 @@
 import 'whatwg-fetch';
 import * as ActionTypes from 'constants/gifs';
+import { beginTask, endTask } from '../../../src';
 
 export function getRandomGif() {
   return {
     type: ActionTypes.GET_RANDOM_GIF,
-    nprogress: [
-      ActionTypes.GET_RANDOM_GIF_FULFILLED,
-      ActionTypes.GET_RANDOM_GIF_REJECTED
-    ],
+    nprogress: true,
     payload: fetch('https://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC').then(res => res.json())
   }
 }
@@ -18,17 +16,19 @@ export function loadMultipleGifs(n = 1) {
 
     return dispatch({
       type: ActionTypes.LOAD_MULTIPLE_GIFS,
-      nprogress: [
-        ActionTypes.LOAD_MULTIPLE_GIFS_FULFILLED,
-        ActionTypes.LOAD_MULTIPLE_GIFS_REJECTED
-      ],
+      nprogress: true,
       payload: Promise.all(promises)
     });
   };
 }
 
 export function reset() {
-  return {
-    type: ActionTypes.RESET
+  return (dispatch) => {
+    dispatch(beginTask());
+    dispatch({ type: ActionTypes.RESET });
+
+    setTimeout(() => {
+      dispatch(endTask());
+    }, 500);
   };
 }
