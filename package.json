@@ -2,7 +2,7 @@
   "name": "redux-nprogress",
   "version": "0.1.0",
   "description": "Redux NProgress",
-  "main": "src/index.js",
+  "main": "lib/index.js",
   "files": [
     "dist",
     "lib"
