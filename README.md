@@ -1,3 +1,3 @@
 WIP: Redux NProgress
 ====================
-Check the demo [I'm an inline-style link](http://jaredt67.github.io/redux-nprogress/)
+Check the [demo](http://jaredt67.github.io/redux-nprogress/)
