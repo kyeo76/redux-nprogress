@@ -8,7 +8,7 @@ export function getRandomGif() {
       ActionTypes.GET_RANDOM_GIF_FULFILLED,
       ActionTypes.GET_RANDOM_GIF_REJECTED
     ],
-    payload: fetch('http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC').then(res => res.json())
+    payload: fetch('https://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC').then(res => res.json())
   }
 }
 
