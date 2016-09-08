@@ -4,6 +4,8 @@ Redux Middleware, Component & Actions for the most popular [progress bar](https:
 
 Tests will be available soon.
 
+[Demo](http://jaredt67.github.io/redux-nprogress/)
+
 
 ## Installation
 
