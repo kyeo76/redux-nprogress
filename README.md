@@ -1,6 +1,6 @@
 # WIP: Redux NProgress
 
-Redux Middleware, Component & Actions for the most popular [progress bar](https://github.com/rstacruz/nprogress).
+Redux Middleware, Reducer, Component & Actions for the most popular [progress bar](https://github.com/rstacruz/nprogress).
 
 Tests will be available soon.
 
