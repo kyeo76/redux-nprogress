@@ -1,0 +1,98 @@
+@import "~src/styles/keyframes";
+
+.body {
+  padding: 25px 30px;
+  border-bottom: 1px solid rgba(0, 0, 0, .1);
+  position: relative;
+}
+
+.title {
+  font-family: 'Merriweather', serif;
+  font-size: 2.5em;
+  margin: 0;
+  display: inline-block;
+  font-weight: 700;
+
+  @media only screen and (max-width: 767px) {
+    font-size: 1.3em;
+    width: 6em;
+  }
+}
+
+.nprogress {
+  animation: color 10s infinite linear;
+}
+
+.description {
+  font-family: 'Merriweather', serif;
+  font-size: 1em;
+  font-weight: 300;
+  color: #A6A6A6;
+  margin-left: 20px;
+
+  @media only screen and (max-width: 767px) {
+    display: none;
+  }
+}
+
+.github {
+  position: absolute;
+  top: 25px;
+  right: 30px;
+}
+
+@-webkit-keyframes color {
+  0% { color: rgba(0, 0, 0, .78); }
+  10% { color: rgba(202, 158, 200, 0.5); }
+  20% { color: rgba(255, 0, 0, .5) }
+  30% { color: rgba(14, 88, 179, 0.68); }
+  40% { color: rgba(0, 255, 31, 0.5); }
+  50% { color: rgba(146, 210, 172, 0.68) }
+  60% { color: rgba(0, 208, 255, 0.5); }
+  70% { color: rgba(0, 255, 31, 0.5); }
+  80% { color: rgba(4, 0, 255, 0.5); }
+  90% { color: rgba(39, 0, 253, 0.28); }
+  100% { color: rgba(0, 0, 0, .78); }
+}
+
+@-moz-keyframes color {
+  0% { color: rgba(0, 0, 0, .78); }
+  10% { color: rgba(202, 158, 200, 0.5); }
+  20% { color: rgba(255, 0, 0, .5) }
+  30% { color: rgba(14, 88, 179, 0.68); }
+  40% { color: rgba(0, 255, 31, 0.5); }
+  50% { color: rgba(146, 210, 172, 0.68) }
+  60% { color: rgba(0, 208, 255, 0.5); }
+  70% { color: rgba(0, 255, 31, 0.5); }
+  80% { color: rgba(4, 0, 255, 0.5); }
+  90% { color: rgba(39, 0, 253, 0.28); }
+  100% { color: rgba(0, 0, 0, .78); }
+}
+
+@-o-keyframes color {
+  0% { color: rgba(0, 0, 0, .78); }
+  10% { color: rgba(202, 158, 200, 0.5); }
+  20% { color: rgba(255, 0, 0, .5) }
+  30% { color: rgba(14, 88, 179, 0.68); }
+  40% { color: rgba(0, 255, 31, 0.5); }
+  50% { color: rgba(146, 210, 172, 0.68) }
+  60% { color: rgba(0, 208, 255, 0.5); }
+  70% { color: rgba(0, 255, 31, 0.5); }
+  80% { color: rgba(4, 0, 255, 0.5); }
+  90% { color: rgba(39, 0, 253, 0.28); }
+  100% { color: rgba(0, 0, 0, .78); }
+}
+
+@keyframes color {
+  0% { color: rgba(0, 0, 0, .78); }
+  10% { color: rgba(202, 158, 200, 0.5); }
+  20% { color: rgba(255, 0, 0, .5) }
+  30% { color: rgba(14, 88, 179, 0.68); }
+  40% { color: rgba(0, 255, 31, 0.5); }
+  50% { color: rgba(146, 210, 172, 0.68) }
+  60% { color: rgba(0, 208, 255, 0.5); }
+  70% { color: rgba(0, 255, 31, 0.5); }
+  80% { color: rgba(4, 0, 255, 0.5); }
+  90% { color: rgba(39, 0, 253, 0.28); }
+  100% { color: rgba(0, 0, 0, .78); }
+}

@@ -1,0 +1,28 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body,
+html {
+  height: 100%;
+  width: 100%;
+  color: rgba(0, 0, 0, .78);
+}
+
+*::selection {
+  color: #ffffff;
+  background: rgba(255, 0, 0, .5);
+}
+
+*::-moz-selection {
+  color: #ffffff;
+  background: rgba(255, 0, 0, .5);
+}
+
+pre {
+  line-height: 1.4;
+  border-radius: 3px;
+  padding: 20px!important;
+}

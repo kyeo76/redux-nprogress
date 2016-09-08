@@ -1,0 +1,16 @@
+.body {
+  padding: 97px 0px 50px;
+  max-width: 960px;
+  margin: 0px auto;
+}
+
+.body__wrapper {
+  padding: 0px 5px;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+
+  @media only screen and (max-width: 767px) {
+    padding: 0px;
+  }
+}

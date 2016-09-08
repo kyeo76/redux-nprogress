@@ -1,0 +1,40 @@
+.body {
+  padding: 0px 30px;
+}
+
+.wrapper {
+  max-width: 600px;
+  margin: 0px auto;
+  padding: 50px 0px;
+}
+
+.section {
+  margin-top: 55px;
+
+  &:first-child {
+    margin-top: 0px;
+  }
+}
+
+.heading {
+  font-family: 'Merriweather', serif;
+  font-weight: 700;
+  font-size: 2em;
+  margin: 1em 0 0.8em;
+}
+
+.example {
+  border-top: 1px solid rgba(0, 0, 0, .1);
+  text-align: center;
+
+  .wrapper {
+    padding: 50px 30px 25px;
+  }
+}
+
+.example__heading {
+  font-size: 3.5em;
+  font-family: 'Merriweather', serif;
+  font-weight: 700;
+  margin: 0px;
+}

@@ -1,0 +1,17 @@
+.body {
+  position: fixed;
+  z-index: 110;
+  left: 30px;
+  top: 117px;
+}
+
+.bubble {
+  color: #fff;
+  font-size: 40px;
+  line-height: 100px;
+  text-align: center;
+  width: 100px;
+  height: 100px;
+  background-color: rgba(221, 17, 68, .1);
+  border-radius: 100%;
+}

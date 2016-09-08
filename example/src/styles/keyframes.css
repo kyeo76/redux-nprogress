@@ -1,0 +1,55 @@
+@-webkit-keyframes color {
+  0% { color: rgba(0, 0, 0, .78); }
+  10% { color: rgba(202, 158, 200, 0.5); }
+  20% { color: rgba(255, 0, 0, .5) }
+  30% { color: rgba(14, 88, 179, 0.68); }
+  40% { color: rgba(0, 255, 31, 0.5); }
+  50% { color: rgba(146, 210, 172, 0.68) }
+  60% { color: rgba(0, 208, 255, 0.5); }
+  70% { color: rgba(0, 255, 31, 0.5); }
+  80% { color: rgba(4, 0, 255, 0.5); }
+  90% { color: rgba(39, 0, 253, 0.28); }
+  100% { color: rgba(0, 0, 0, .78); }
+}
+
+@-moz-keyframes color {
+  0% { color: rgba(0, 0, 0, .78); }
+  10% { color: rgba(202, 158, 200, 0.5); }
+  20% { color: rgba(255, 0, 0, .5) }
+  30% { color: rgba(14, 88, 179, 0.68); }
+  40% { color: rgba(0, 255, 31, 0.5); }
+  50% { color: rgba(146, 210, 172, 0.68) }
+  60% { color: rgba(0, 208, 255, 0.5); }
+  70% { color: rgba(0, 255, 31, 0.5); }
+  80% { color: rgba(4, 0, 255, 0.5); }
+  90% { color: rgba(39, 0, 253, 0.28); }
+  100% { color: rgba(0, 0, 0, .78); }
+}
+
+@-o-keyframes color {
+  0% { color: rgba(0, 0, 0, .78); }
+  10% { color: rgba(202, 158, 200, 0.5); }
+  20% { color: rgba(255, 0, 0, .5) }
+  30% { color: rgba(14, 88, 179, 0.68); }
+  40% { color: rgba(0, 255, 31, 0.5); }
+  50% { color: rgba(146, 210, 172, 0.68) }
+  60% { color: rgba(0, 208, 255, 0.5); }
+  70% { color: rgba(0, 255, 31, 0.5); }
+  80% { color: rgba(4, 0, 255, 0.5); }
+  90% { color: rgba(39, 0, 253, 0.28); }
+  100% { color: rgba(0, 0, 0, .78); }
+}
+
+@keyframes color {
+  0% { color: rgba(0, 0, 0, .78); }
+  10% { color: rgba(202, 158, 200, 0.5); }
+  20% { color: rgba(255, 0, 0, .5) }
+  30% { color: rgba(14, 88, 179, 0.68); }
+  40% { color: rgba(0, 255, 31, 0.5); }
+  50% { color: rgba(146, 210, 172, 0.68) }
+  60% { color: rgba(0, 208, 255, 0.5); }
+  70% { color: rgba(0, 255, 31, 0.5); }
+  80% { color: rgba(4, 0, 255, 0.5); }
+  90% { color: rgba(39, 0, 253, 0.28); }
+  100% { color: rgba(0, 0, 0, .78); }
+}

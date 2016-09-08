@@ -1,0 +1,75 @@
+.body {
+  padding: 25px 30px;
+  background-color: rgba(255, 255, 255, .9);
+}
+
+.button {
+  cursor: pointer;
+  color: rgba(255, 0, 0, .5);
+  background: transparent;
+  border: 2px solid rgba(255, 0, 0, .5);
+  display: inline-block;
+  vertical-align: top;
+  padding: 10px 35px;
+  height: 42px;
+  position: relative;
+  border-radius: 1px;
+  outline: none;
+  transition: all .2s ease;
+
+  &:hover {
+    color: #ffffff;
+    border-color: rgba(255, 0, 0, .1);
+    background-color: rgba(255, 0, 0, .5);
+  }
+
+  @media only screen and (max-width: 767px) {
+    font-size: 0.8em;
+    width: 100%;
+    text-indent: -9999px;
+    padding-left: 0;
+    padding-right: 0;
+
+    &:before {
+      text-indent: 0px;
+      position: absolute;
+      left: 0px;
+      right: 0px;
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .button--random:before {
+    content: 'Random'
+  }
+
+  .button--multi:before {
+    content: 'Multi'
+  }
+
+  .button--reset:before {
+    content: 'Reset'
+  }
+}
+
+.controls {
+  text-align: center;
+
+  @media only screen and (max-width: 767px) {
+    display: flex;
+    margin: 0px -10px;
+  }
+}
+
+.controls__item {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 15px;
+
+  @media only screen and (max-width: 767px) {
+    flex: 0 0 33.3%;
+    padding: 0px 10px;
+    margin-right: 0px;
+  }
+}
