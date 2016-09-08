@@ -10,10 +10,9 @@ const cn = classNames.bind(styles);
 const middlewareCodeString = `import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 import createLogger from 'redux-logger';
+import { nprogressMiddleware } from 'redux-nprogress';
 import promiseMiddleware from 'redux-promise-middleware';
 import rootReducer from 'reducers/index';
-
-const nprogress = nprogressMiddleware();
 
 const store = createStore(
   rootReducer,
@@ -24,6 +23,8 @@ const store = createStore(
     createLogger()
   )
 );
+
+export default store;
 `;
 
 const componentCodeString = `import React from 'react';
