@@ -1,4 +1,4 @@
-import React, { PureComponent, PropTypes } from 'react'
+import React, { Component, PropTypes } from 'react'
 import { Sticky } from 'react-sticky';
 import classNames from 'classnames/bind';
 
@@ -6,7 +6,7 @@ import styles from './TasksBubble.scss';
 
 const cn = classNames.bind(styles);
 
-export default class TasksBubble extends PureComponent {
+export default class TasksBubble extends Component {
   static propTypes = {
     tasks: PropTypes.number
   }
@@ -24,7 +24,10 @@ export default class TasksBubble extends PureComponent {
       <Sticky stickyStyle={ stickyStyle }>
         <div className={ cn('body') }>
           <div className={ cn('bubble') }>
-            Tasks counter: <span>{ tasks }</span>
+            { 'Tasks counter: '}
+            <span className={ cn('counter') }>
+              { tasks }
+            </span>
           </div>
         </div>
       </Sticky>

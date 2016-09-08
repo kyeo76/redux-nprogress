@@ -10,6 +10,11 @@
   font-family: 'Merriweather', serif;
 
   span {
-    color: rgba(255, 0, 0, 0.5);
+    vertical-align: middle;
   }
+}
+
+.counter {
+  font-size: 1.5em;
+  color: rgba(255, 0, 0, 0.5);
 }

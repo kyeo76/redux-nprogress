@@ -1,11 +1,11 @@
-import React, { PropTypes, PureComponent } from 'react';
+import React, { PropTypes, Component } from 'react';
 import classNames from 'classnames/bind';
 
 import styles from './Gif.scss';
 
 const cn = classNames.bind(styles);
 
-export default class Gif extends PureComponent {
+export default class Gif extends Component {
   static propTypes = {
     item: PropTypes.object
   }

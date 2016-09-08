@@ -1,4 +1,4 @@
-import React, { PureComponent, PropTypes } from 'react';
+import React, { Component, PropTypes } from 'react';
 import classNames from 'classnames/bind';
 
 import Github from 'components/Github';
@@ -7,7 +7,7 @@ import styles from './Header.scss';
 
 const cn = classNames.bind(styles);
 
-export default class Header extends PureComponent {
+export default class Header extends Component {
   render() {
     return (
       <div className={ cn('body') }>

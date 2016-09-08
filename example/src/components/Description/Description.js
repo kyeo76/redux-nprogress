@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react';
+import React, { Component } from 'react';
 import classNames from 'classnames/bind';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { github } from 'react-syntax-highlighter/dist/styles';
@@ -75,7 +75,7 @@ export function loadPosts() {
   };
 }`;
 
-export default class Description extends PureComponent {
+export default class Description extends Component {
   render() {
     return (
       <div>
