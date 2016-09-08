@@ -27,6 +27,18 @@ const store = createStore(
 export default store;
 `;
 
+const reducerCodeString = `import { combineReducers } from 'redux';
+import { nprogress } from 'redux-nprogress';
+import posts from './posts';
+
+const rootReducer = combineReducers({
+  posts,
+  nprogress
+});
+
+export default rootReducer;
+`;
+
 const componentCodeString = `import React from 'react';
 import { NProgress } from 'redux-nprogress';
 import Header from 'components/Header';
@@ -95,6 +107,14 @@ export default class Description extends Component {
 
               <SyntaxHighlighter language="javascript" style={ github }>
                 { middlewareCodeString }
+              </SyntaxHighlighter>
+
+            </div>
+            <div className={ cn('section') }>
+              <h2 className={ cn('heading') }>Add reducer</h2>
+
+              <SyntaxHighlighter language="javascript" style={ github }>
+                { reducerCodeString }
               </SyntaxHighlighter>
 
             </div>
