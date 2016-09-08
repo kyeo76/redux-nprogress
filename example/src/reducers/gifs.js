@@ -6,14 +6,14 @@ const initialState = {
 };
 
 const handlers = {
-  [`${ActionTypes.GET_RANDOM_GIF}_PENDING`]: (action, state) => {
+  [`${ActionTypes.GET_RANDOM_GIF}_LOADING`]: (action, state) => {
     return {
       ...state,
       loading: true
     };
   },
 
-  [`${ActionTypes.GET_RANDOM_GIF}_FULFILLED`]: ({ payload }, state) => {
+  [ActionTypes.GET_RANDOM_GIF_SUCCESS]: ({ payload }, state) => {
     return {
       ...state,
       list: [ payload.data, ...state.list ],
@@ -21,7 +21,7 @@ const handlers = {
     };
   },
 
-  [`${ActionTypes.GET_RANDOM_GIF}_REJECTED`]: (action, state) => {
+  [ActionTypes.GET_RANDOM_GIF_ERROR]: (action, state) => {
     return {
       ...state,
       loading: false

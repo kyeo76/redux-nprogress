@@ -1,7 +1,11 @@
 .body {
-  padding: 97px 0px 50px;
+  padding-bottom: 50px;
   max-width: 960px;
   margin: 0px auto;
+
+  @media only screen and (max-width: 767px) {
+    padding-bottom: 0px;
+  }
 }
 
 .body__wrapper {

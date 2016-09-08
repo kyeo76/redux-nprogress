@@ -31,18 +31,13 @@ class App extends Component {
     return (
       <div>
         <NProgress color="rgba(255, 0, 0, 0.5)" />
-
-        <TasksBubble tasks={ tasks } />
-
         <Header />
-        <Description />
-
-        <Layout>
-          <StickyContainer>
-            <ControlsPane loading={ loading } {...actions} />
-            <GifGrid list={ list } loading={ loading } />
-          </StickyContainer>
-        </Layout>
+        <StickyContainer>
+          <TasksBubble tasks={ tasks } />
+          <Description />
+          <ControlsPane loading={ loading } {...actions} />
+          <GifGrid list={ list } loading={ loading } />
+        </StickyContainer>
       </div>
     );
   }

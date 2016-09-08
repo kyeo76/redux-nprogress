@@ -9,10 +9,19 @@
 }
 
 .section {
-  margin-top: 55px;
+  margin-top: 65px;
 
   &:first-child {
     margin-top: 0px;
+  }
+
+  @media only screen and (max-width: 767px) {
+    pre {
+      font-size: 0.9em;
+      margin-left: -30px;
+      margin-right: -30px;
+      border-radius: 0px;
+    }
   }
 }
 
@@ -21,6 +30,10 @@
   font-weight: 700;
   font-size: 2em;
   margin: 1em 0 0.8em;
+
+  @media only screen and (max-width: 767px) {
+    font-size: 1.5em;
+  }
 }
 
 .example {

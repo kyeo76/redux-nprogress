@@ -10,8 +10,12 @@ import rootReducer from '../reducers';
 
 const middleware = [
   thunk,
-  nprogressMiddleware(),
-  promiseMiddleware()
+  nprogressMiddleware({
+    resultActionTypeSuffixes: ['SUCCESS', 'ERROR']
+  }),
+  promiseMiddleware({
+    promiseTypeSuffixes: ['LOADING', 'SUCCESS', 'ERROR']
+  })
 ];
 
 if (process.env.NODE_ENV !== 'production') {
