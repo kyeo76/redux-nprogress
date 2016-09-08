@@ -42,6 +42,26 @@ export default store;
 ```
 
 
+### Reducer
+
+Import reducer and assign it to the `nporgress` key in your root reducer.
+
+Example root reducer:
+
+```
+import { combineReducers } from 'redux';
+import { nprogress } from 'redux-nprogress';
+import posts from './posts';
+
+const rootReducer = combineReducers({
+  posts,
+  nprogress
+});
+
+export default rootReducer;
+```
+
+
 ### Actions
 
 To use the middleware, dispatch an action with `nprogress` property.
