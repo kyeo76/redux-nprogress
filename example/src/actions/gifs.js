@@ -16,7 +16,10 @@ export function loadMultipleGifs(n = 1) {
 
     return dispatch({
       type: ActionTypes.LOAD_MULTIPLE_GIFS,
-      nprogress: true,
+      nprogress: [
+        ActionTypes.LOAD_MULTIPLE_GIFS_SUCCESS,
+        ActionTypes.LOAD_MULTIPLE_ERROR
+      ],
       payload: Promise.all(promises)
     });
   };
