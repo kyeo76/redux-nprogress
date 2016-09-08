@@ -12,8 +12,8 @@
     "build:all": "npm run clean && npm run build:commonjs && npm run build:standalone",
     "build:commonjs": "NODE_ENV=production babel src/ --out-dir lib/",
     "build:standalone": "NODE_ENV=production webpack",
-    "build:gh-pages": "rimraf example/dist && webpack --config example/webpack.config.production.js",
-    "start:example": "NODE_ENV=production node example/server.js"
+    "build:gh-pages": "rimraf example/dist && NODE_ENV=production webpack --config example/webpack.config.production.js",
+    "start:example": "node example/server.js"
   },
   "repository": {
     "type": "git",
