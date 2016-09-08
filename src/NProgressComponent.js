@@ -1,11 +1,11 @@
-import React, { PureComponent, PropTypes } from 'react';
+import React, { Component, PropTypes } from 'react';
 import { renderToString } from 'react-dom/server';
 import { connect } from 'react-redux'
 import NProgress from 'nprogress';
 
 import NProgressTemplate from './NProgressTemplate';
 
-class NProgressComponent extends PureComponent {
+class NProgressComponent extends Component {
   static propTypes = {
     nprogress: PropTypes.object
   }

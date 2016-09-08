@@ -1,4 +1,4 @@
-import React, { PureComponent, PropTypes } from 'react';
+import React, { Component, PropTypes } from 'react';
 import { Sticky } from 'react-sticky';
 import { findDOMNode } from 'react-dom';
 import classNames from 'classnames/bind';
@@ -7,7 +7,7 @@ import styles from './ControlsPane.scss';
 
 const cn = classNames.bind(styles);
 
-export default class ControlsPane extends PureComponent {
+export default class ControlsPane extends Component {
   static propTypes = {
     actions: PropTypes.object
   }
