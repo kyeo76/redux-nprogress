@@ -10,7 +10,6 @@ import Header from 'components/Header';
 import Layout from 'components/Layout';
 import TasksBubble from 'components/TasksBubble';
 import Description from 'components/Description';
-import ControlsPaneScrollWrapper from 'components/ControlsPaneScrollWrapper';
 import ControlsPane from 'components/ControlsPane';
 import GifGrid from 'components/GifGrid';
 
