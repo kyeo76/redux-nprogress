@@ -11,7 +11,11 @@ export default () => (
   <Provider store={store}>
     <div>
       <App />
-      <DevTools />
+
+      { process.env.NODE_ENV !== 'production' &&
+        <DevTools />
+      }
+
     </div>
   </Provider>
 );

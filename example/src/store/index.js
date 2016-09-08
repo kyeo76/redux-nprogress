@@ -8,25 +8,31 @@ import { nprogressMiddleware } from '../../../src';
 import DevTools from '../containers/DevTools';
 import rootReducer from '../reducers';
 
-const logger = createLogger();
+const middleware = [
+  thunk,
+  nprogressMiddleware(),
+  promiseMiddleware()
+];
 
-const enhancer = compose(
-  applyMiddleware(
-    thunk,
-    nprogressMiddleware(),
-    promiseMiddleware(),
-    createLogger(),
-  ),
-  DevTools.instrument(),
-  persistState(
-    window.location.href.match(
-      /[?&]debug_session=([^&#]+)\b/
-    )
-  )
-);
+if (process.env.NODE_ENV !== 'production') {
+  middleware.push(createLogger());
+}
+
+const enhancers = [applyMiddleware(...middleware)];
+
+if (process.env.NODE_ENV !== 'production') {
+  enhancers.push(
+    DevTools.instrument(),
+    persistState(window.location.href.match(/[?&]debug_session=([^&#]+)\b/))
+  );
+}
 
 export default function configureStore(preloadedState) {
-  const store = createStore(rootReducer, preloadedState, enhancer);
+  const store = createStore(
+    rootReducer,
+    preloadedState,
+    compose(...enhancers)
+  );
 
   if (module.hot) {
     module.hot.accept('../reducers', () => {

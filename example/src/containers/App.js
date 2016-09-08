@@ -28,18 +28,6 @@ class App extends Component {
   render() {
     const { list, loading, tasks, actions } = this.props;
 
-    const style = {
-      fontSize: '40px',
-      lineHeight: 0,
-      color: '#fff',
-      backgroundColor: 'rgba(221, 17, 68, .1)',
-      padding: '50px',
-      position: 'fixed',
-      zIndex: 110,
-      left: 0,
-      top: '97px'
-    };
-
     return (
       <div>
         <NProgress color="rgba(255, 0, 0, 0.5)" />
