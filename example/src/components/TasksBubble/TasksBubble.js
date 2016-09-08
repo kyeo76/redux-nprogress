@@ -24,7 +24,7 @@ export default class TasksBubble extends Component {
       <Sticky stickyStyle={ stickyStyle }>
         <div className={ cn('body') }>
           <div className={ cn('bubble') }>
-            { 'Tasks counter: '}
+            <span>Tasks counter: </span>
             <span className={ cn('counter') }>
               { tasks }
             </span>
