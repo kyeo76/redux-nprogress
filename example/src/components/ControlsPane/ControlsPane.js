@@ -27,7 +27,7 @@ export default class ControlsPane extends Component {
             </div>
             <div className={ cn('controls__item') }>
               <button className={ cn('button', 'button--multi') }
-                      onClick={ () => loadMultipleGifs(15) }>
+                      onClick={ () => loadMultipleGifs(8) }>
                 Load multiple gifs
               </button>
             </div>

@@ -3,7 +3,6 @@ import { beginTask, endTask } from './actions';
 import isArray from './isArray';
 
 const nprogressMetaKey = '__nprogress__';
-
 const resultActionTypeSuffixes = ['FULFILLED', 'REJECTED'];
 
 const isNProgressResultAction = (type, fulfilled, rejected) => {
@@ -22,16 +21,12 @@ const getNProgressMeta = (type, nprogress, configSuffixes) => {
   return suffixes.map(suffix => `${type}_${suffix}`);
 };
 
-const isNProgressMetaAction = ({ type, meta }) => {
+const isNProgressMetaAction = (type, meta) => {
   return (
     meta &&
     meta[nprogressMetaKey] &&
     isNProgressResultAction(type, ...meta[nprogressMetaKey])
   );
-};
-
-const isNProgressAction = ({ nprogress, ...rest }) => {
-  return nprogress || isNProgressMetaAction(rest);
 };
 
 export default (config = {}) => {
@@ -41,7 +36,10 @@ export default (config = {}) => {
     next => action => {
       const { type, meta } = action;
 
-      if (!isNProgressAction(action)) {
+      const isMetaAction = isNProgressMetaAction(type, meta);
+      const isNProgressAction = action.nprogress || isMetaAction;
+
+      if (!isNProgressAction) {
         return next(action);
       }
 
@@ -59,21 +57,21 @@ export default (config = {}) => {
         });
       }
 
-      if (isNProgressMetaAction(action)) {
+      if (isMetaAction) {
         const {
           meta: { __nprogress__, ...metaProps },
           ...actionProps
         } = action;
 
         const hasMeta = Object.keys(metaProps).length > 0;
+        const actionMeta = hasMeta ? { meta: metaProps } : {};
 
         dispatch(endTask());
 
-        return next({
-          ...actionProps,
-          ...(hasMeta ? { meta: metaProps } : {})
-        });
+        return next({ ...actionProps, ...actionMeta });
       }
+
+      return next(action);
     }
   );
 };
