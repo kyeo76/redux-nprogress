@@ -1,4 +1,4 @@
-# WIP: Redux NProgress
+# 🔨 WIP: Redux NProgress
 
 Redux Middleware, Reducer, Component & Actions for the most popular [progress bar](https://github.com/rstacruz/nprogress).
 
