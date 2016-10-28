@@ -22,7 +22,7 @@ export function loadMultipleGifs(n = 1) {
       type: ActionTypes.LOAD_MULTIPLE_GIFS,
       nprogress: [
         ActionTypes.LOAD_MULTIPLE_GIFS_SUCCESS,
-        ActionTypes.LOAD_MULTIPLE_ERROR
+        ActionTypes.LOAD_MULTIPLE_GIFS_ERROR
       ],
       payload: Promise.all(promises)
     });
