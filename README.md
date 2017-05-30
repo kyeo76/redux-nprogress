@@ -44,7 +44,7 @@ export default store;
 
 ### Reducer
 
-Import reducer and assign it to the `nporgress` key in your root reducer.
+Import reducer and assign it to the `nprogress` key in your root reducer.
 
 Example root reducer:
 
