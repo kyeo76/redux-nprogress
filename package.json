@@ -34,12 +34,16 @@
   ],
   "author": "Alexander Uspensy <aeuspensky@gmail.com>",
   "license": "MIT",
+  "dependencies": {
+    "prop-types": "^15.5.10"
+  },
   "peerDependencies": {
-    "react": "^0.14.7 || ^15.3.1",
-    "react-dom": "^0.14.7 || ^15.3.1",
+    "react": "^0.14.9 || ^15.3.1",
+    "react-dom": "^0.14.9 || ^15.3.1",
     "nprogress": "^0.2.0"
   },
   "devDependencies": {
+    "babel-cli": "^6.24.1",
     "babel-core": "^6.11.4",
     "babel-loader": "^6.2.4",
     "babel-plugin-transform-object-rest-spread": "^6.8.0",
