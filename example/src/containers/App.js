@@ -1,4 +1,5 @@
-import React, { PropTypes, Component } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { StickyContainer } from 'react-sticky';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
