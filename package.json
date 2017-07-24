@@ -1,6 +1,6 @@
 {
   "name": "redux-nprogress",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Redux NProgress",
   "main": "lib/index.js",
   "files": [
