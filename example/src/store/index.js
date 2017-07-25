@@ -1,11 +1,9 @@
 import { createStore, applyMiddleware, compose } from 'redux';
-import { persistState } from 'redux-devtools';
 import thunk from 'redux-thunk';
 import createLogger from 'redux-logger';
 import promiseMiddleware from 'redux-promise-middleware';
 import { nprogressMiddleware } from '../../../src';
 
-import DevTools from '../containers/DevTools';
 import rootReducer from '../reducers';
 
 const middleware = [
@@ -24,11 +22,8 @@ if (process.env.NODE_ENV !== 'production') {
 
 const enhancers = [applyMiddleware(...middleware)];
 
-if (process.env.NODE_ENV !== 'production') {
-  enhancers.push(
-    DevTools.instrument(),
-    persistState(window.location.href.match(/[?&]debug_session=([^&#]+)\b/))
-  );
+if (process.env.NODE_ENV !== 'production' && window.__REDUX_DEVTOOLS_EXTENSION__) {
+  enhancers.push(window.__REDUX_DEVTOOLS_EXTENSION__());
 }
 
 export default function configureStore(preloadedState) {
