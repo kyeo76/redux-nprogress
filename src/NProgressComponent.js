@@ -41,7 +41,7 @@ class NProgressComponent extends Component {
   }
 }
 
-function mapStateToProps(state, { nprogressKey }) {
+function mapStateToProps(state = {}, { nprogressKey }) {
   return state[nprogressKey || 'nprogress'];
 }
 
